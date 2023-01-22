@@ -1,3 +1,4 @@
+<head><title>LaggySon</title></head>
 <div class="h-screen">
 	<h1 class="font-bold  text-yellow-500 text-center  text-7xl">LaggySon</h1>
 	<ul
