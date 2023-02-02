@@ -1,16 +1,14 @@
 <head><title>Laggish</title></head>
 <div class="h-screen">
 	<div
-		class="w-100 lg:w-1/2 m-auto bg-yellow-500 drop-shadow-lg border-t-0 uppercase mt-4 font-bold"
+		class="w-100 lg:w-1/2 m-auto bg-cornflower-blue drop-shadow-lg border-t-0 uppercase mt-4 font-bold"
 	>
-		<h1 class="font-bold  text-yellow-500 text-center  text-7xl text-white">Laggish</h1>
-		<h2 class="text-center mt-3 text-3xl bg-white pb-2 whitespace-nowrap">
-			esports bits and peices
-		</h2>
+		<h1 class="font-bold  text-yellow-500 text-center  text-7xl text-white">Michael Richards</h1>
+		<h2 class="text-center mt-3 text-3xl bg-white pb-2 whitespace-nowrap">AKA LaggySon</h2>
 	</div>
 
 	<ul
-		class=" drop-shadow-lg mt-9 font-DotMatrix  text-yellow-500 w-100 lg:w-1/2 m-auto flex flex-col border-4 border-gray-400 p-4 bg-black relative"
+		class="uppercase drop-shadow-lg mt-9 font-DotMatrix text-[#EAB308] w-100 lg:w-1/2 m-auto flex flex-col border-4 border-[#A1A1AA] p-4 bg-black relative"
 	>
 		<li class="space-x-4">
 			<a
@@ -38,9 +36,6 @@
 
 <style>
 	:root {
-		background-image: url('/trainStation.jpg');
-		background-size: cover;
-		background-attachment: fixed;
-		background-position: center;
+		background-color: black;
 	}
 </style>
