@@ -1,4 +1,4 @@
-<head><title>Laggish</title></head>
+<head><title>LaggySon</title></head>
 <div class="h-screen">
 	<div
 		class="w-100 lg:w-1/2 m-auto bg-cornflower-blue drop-shadow-lg border-t-0 uppercase mt-4 font-bold"
