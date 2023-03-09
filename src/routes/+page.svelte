@@ -1,41 +1,29 @@
-<head><title>LaggySon</title></head>
-<div class="h-screen">
-	<div
-		class="w-100 lg:w-1/2 m-auto bg-cornflower-blue drop-shadow-lg border-t-0 uppercase mt-4 font-bold"
-	>
-		<h1 class="font-bold  text-yellow-500 text-center  text-7xl text-white">Michael Richards</h1>
-		<h2 class="text-center mt-3 text-3xl bg-white pb-2 whitespace-nowrap">AKA LaggySon</h2>
+<script lang="ts">
+	import Traincar from './traincar.svelte';
+	import Supabase from './supabase.svelte';
+	import Svelte from './svelte.svelte';
+	import Tailwind from './tailwind.svelte';
+
+	let projects = [
+		{ color: '#ff4700', name: 'Svelte', logo: Svelte },
+		{ color: '#38bdf8', name: 'Tailwind', logo: Tailwind },
+		{ color: '#3fcf8e', name: 'supabase', logo: Supabase }
+	];
+</script>
+
+<nav class="sticky h-24   text-6xl flex justify-center items-center">Michael Richards</nav>
+
+<div class="flex justify-center">
+	<div class="grid overflow-scroll grid-flow-col auto-cols-max">
+		{#each projects as project}
+			<div class="w-96  drop-shadow-xl relative shrink-0">
+				<Traincar fill={project.color} stroke="transparent" />
+				<div class="w-full h-full flex justify-center items-center absolute top-0">
+					<div class="w-20 h-20 flex justify-center items-center mb-5">
+						<svelte:component this={project.logo} fill="white" secFill={project.color} />
+					</div>
+				</div>
+			</div>
+		{/each}
 	</div>
-
-	<ul
-		class="uppercase drop-shadow-lg mt-9 font-DotMatrix text-[#EAB308] w-100 lg:w-1/2 m-auto flex flex-col border-4 border-[#A1A1AA] p-4 bg-black relative"
-	>
-		<li class="space-x-4">
-			<a
-				href="https://scoreboardish.laggi.sh"
-				class="pl-2 hover:before:content-['>'] before:absolute before:left-2  flex justify-between text-2xl after:content-['ON-TIME'] hover:after:content-['ALL_ABOARD'] after:text-right after:whitespace-nowrap lg:text-3xl"
-				>Scoreboardish</a
-			>
-		</li>
-		<li>
-			<a
-				href="https://tranquility.gg"
-				class="pl-2 hover:before:content-['>'] before:absolute before:left-2  flex justify-between text-2xl after:content-['ON-TIME'] hover:after:content-['ALL_ABOARD'] after:text-right after:whitespace-nowrap lg:text-3xl"
-				>Tranquility Gaming</a
-			>
-		</li>
-		<li>
-			<a
-				href="https://github.com/laggyson"
-				class="pl-2 hover:before:content-['>'] before:absolute before:left-2  flex justify-between text-2xl after:content-['ON-TIME'] hover:after:content-['ALL_ABOARD'] after:text-right after:whitespace-nowrap lg:text-3xl"
-				>GitHub</a
-			>
-		</li>
-	</ul>
 </div>
-
-<style>
-	:root {
-		background-color: black;
-	}
-</style>
