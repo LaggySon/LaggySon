@@ -2,6 +2,6 @@
 	import '../app.postcss';
 </script>
 
-<body class="h-screen bg-[#18181a] text-white">
+<body class="h-screen dark:bg-[#18181a] dark:text-white">
 	<slot />
 </body>
