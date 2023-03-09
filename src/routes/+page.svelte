@@ -11,12 +11,15 @@
 	];
 </script>
 
-<nav class="sticky h-24   text-6xl flex justify-center items-center">Michael Richards</nav>
+<nav class="sticky h-24 flex flex-col justify-center items-center">
+	<h1 class="text-4xl lg:text-5xl">Michael Richards</h1>
+	<h2 class="text-xl lg:text-2xl">Front End Web Developer</h2>
+</nav>
 
 <div class="flex justify-center">
-	<div class="grid overflow-scroll grid-flow-col auto-cols-max">
+	<div class="grid overflow-scroll grid-flow-col auto-cols-max snap-mandatory snap-x">
 		{#each projects as project}
-			<div class="w-96  drop-shadow-xl relative shrink-0">
+			<div class="w-80  drop-shadow-sm relative shrink-0 snap-center">
 				<Traincar fill={project.color} stroke="transparent" />
 				<div class="w-full h-full flex justify-center items-center absolute top-0">
 					<div class="w-20 h-20 flex justify-center items-center mb-5">

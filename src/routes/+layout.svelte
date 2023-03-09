@@ -2,4 +2,6 @@
 	import '../app.postcss';
 </script>
 
-<slot />
+<body class="h-screen bg-[#18181a] text-white">
+	<slot />
+</body>
