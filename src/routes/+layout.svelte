@@ -2,6 +2,9 @@
 	import '../app.postcss';
 </script>
 
-<body class="h-screen dark:bg-[#18181a] dark:text-white">
+<head>
+	<title>Michael Richards</title>
+</head>
+<body class="h-screen font-Heebo dark:bg-[#18181a] dark:text-white">
 	<slot />
 </body>

@@ -17,7 +17,9 @@
 </nav>
 
 <div class="flex justify-center">
-	<div class="grid overflow-scroll grid-flow-col auto-cols-max snap-mandatory snap-x">
+	<div
+		class="scrollbar-hide grid overflow-scroll grid-flow-col auto-cols-max snap-mandatory snap-x"
+	>
 		{#each projects as project}
 			<div class="w-80  drop-shadow-sm relative shrink-0 snap-center">
 				<Traincar fill={project.color} stroke="transparent" />
@@ -29,4 +31,10 @@
 			</div>
 		{/each}
 	</div>
+</div>
+<div class="p-2 text-center [&>p]:mb-2">
+	<p>
+		In addition to being a Computer Science student at Wentworth Insitute of technology, I am a
+		passionate, hard-working, self-taught Front End Web Developer.
+	</p>
 </div>

@@ -149,12 +149,13 @@ const config = {
 		},
 		extend: {
 			fontFamily: {
-				DotMatrix: ['DotMatrix', 'sans-serif']
+				DotMatrix: ['DotMatrix', 'sans-serif'],
+				Heebo: ['Heebo', 'sans-serif']
 			}
 		}
 	},
 
-	plugins: []
+	plugins: [require('tailwind-scrollbar-hide')]
 };
 
 module.exports = config;
