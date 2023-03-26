@@ -3,11 +3,19 @@
 	import Supabase from './supabase.svelte';
 	import Svelte from './svelte.svelte';
 	import Tailwind from './tailwind.svelte';
+	import Nextjs from './nextjs.svelte';
+	import Sass from './sass.svelte';
+	import Prisma from './prisma.svelte';
+	import Typescript from './typescript.svelte';
 
 	let projects = [
 		{ color: '#ff4700', name: 'Svelte', logo: Svelte },
 		{ color: '#38bdf8', name: 'Tailwind', logo: Tailwind },
-		{ color: '#3fcf8e', name: 'supabase', logo: Supabase }
+		{ color: '#3fcf8e', name: 'supabase', logo: Supabase },
+		{ color: 'white', name: 'NextJS', logo: Nextjs },
+		{ color: '#cd6799', name: 'SASS', logo: Sass },
+		{ color: '#0c344b', name: 'Prisma', logo: Prisma },
+		{ color: '#3178c6', name: 'Typescript', logo: Typescript }
 	];
 </script>
 
@@ -17,9 +25,7 @@
 </nav>
 
 <div class="flex justify-center">
-	<div
-		class="scrollbar-hide grid overflow-scroll grid-flow-col auto-cols-max snap-mandatory snap-x"
-	>
+	<div class=" top-0 py-12 animate-marquee2 whitespace-nowrap flex">
 		{#each projects as project}
 			<div class="w-80  drop-shadow-sm relative shrink-0 snap-center">
 				<Traincar fill={project.color} stroke="transparent" />
