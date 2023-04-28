@@ -5,7 +5,8 @@ const config = {
 		extend: {
 			fontFamily: {
 				DotMatrix: ['DotMatrix', 'sans-serif'],
-				Heebo: ['Heebo', 'sans-serif']
+				Heebo: ['Heebo', 'sans-serif'],
+				Righteous: ['Righteous', 'sans-serif']
 			}
 			// colors: {
 			// 	gainsboro: '#dcdcdc',

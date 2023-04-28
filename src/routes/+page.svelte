@@ -15,6 +15,7 @@
 	import Marquee from 'svelte-fast-marquee';
 	import type { SvelteComponent, SvelteComponentTyped } from 'svelte';
 	import type { SvelteComponentDev } from 'svelte/internal';
+	import Github from './github.svelte';
 
 	type Tech = {
 		color: string;
@@ -72,23 +73,19 @@
 	let w: number;
 </script>
 
-<div class="h-screen">
-	<header class="sticky h-24 flex flex-col justify-center items-center">
+<div class="h-screen flex flex-col ">
+	<header class="sticky h-24 flex flex-col justify-center items-center font-Righteous">
 		<h1 class="text-4xl lg:text-5xl">Michael Richards</h1>
 		<h2 class="text-xl lg:text-2xl">Web Developer</h2>
 	</header>
 
-	<div bind:clientWidth={w} class="flex flex-col h-full">
-		<div
-			class="text-center text-md lg:text-lg flex flex-col justify-center  max-w-3xl h-1/6  mx-4 lg:mx-auto"
-		>
-			<p class="text-sm lg:text-md border rounded-lg p-4 my-5">
-				In addition to being a Computer Science student at Wentworth Insitute of technology, I am a
-				passionate, hard-working, self-taught Web Developer.
-			</p>
-			<p class="text-xl lg:text-2xl">Check out some of the technologies I've learned so far!</p>
-		</div>
-		<section class=" text-opacity-0 hover:text-opacity-100 text-white transition-all h-28 mt-5">
+	<div bind:clientWidth={w} class="flex flex-col">
+		<p class=" max-w-3xl text-center text-md lg:text-lg mx-auto">
+			I love building practical, professional-looking, responsive websites/webapps in all sorts of
+			frameworks!
+		</p>
+
+		<section class=" text-opacity-0 hover:text-opacity-100 text-white transition-all h-1/2 mt-5">
 			<Marquee speed={w / 25}>
 				<!-- <div class="h-28 text-white"><Engine /></div> -->
 
@@ -105,36 +102,35 @@
 				{/each}
 			</Marquee>
 		</section>
-
-		<article
-			class=" text-center text-xl lg:text-2xl flex-grow flex flex-col justify-evenly max-w-3xl  mx-4 lg:mx-auto"
-		>
-			<p class="p-4 border rounded-lg">
-				My favorite thing about web development is learning new technologies and finding the best
-				way to get a task done.
-			</p>
-			<h3 class="text-center justify-self-end">Some of my projects...</h3>
-		</article>
 	</div>
-	<section class="flex gap-4 p-2 justify-center">
-		{#each projects as project}
-			<a href={project.link}>
-				<div class="border rounded-lg p-2 hover:bg-slate-500 transition-all">
-					<h3 class="text-center text-2xl font-bold">{project.name}</h3>
-					<p class="text-sm text-center my-2 p-2">{project.desc}</p>
-					<div class="flex flex-wrap gap-2 justify-center">
-						{#each project.techs as tech}
-							<div
-								title={tech.name}
-								class={`h-10 w-10 p-2`}
-								style={`background-color: ${tech.color}`}
-							>
-								<svelte:component this={tech.logo} fill="white" secFill={tech.color} />
-							</div>
-						{/each}
+	<section />
+	<div class="mt-20">
+		<section class="flex gap-4 p-2 justify-center">
+			{#each projects as project}
+				<a href={project.link}>
+					<div class="border rounded-lg p-2 hover:bg-slate-500 transition-all max-w-lg">
+						<h3 class="text-center text-2xl font-bold">{project.name}</h3>
+						<p class="text-sm text-center my-2 p-2">{project.desc}</p>
+						<div class="flex flex-wrap gap-2 justify-center">
+							{#each project.techs as tech}
+								<div
+									title={tech.name}
+									class={`h-10 w-10 p-2`}
+									style={`background-color: ${tech.color}`}
+								>
+									<svelte:component this={tech.logo} fill="white" secFill={tech.color} />
+								</div>
+							{/each}
+						</div>
 					</div>
-				</div>
-			</a>
-		{/each}
-	</section>
+				</a>
+			{/each}
+		</section>
+	</div>
+	<footer class="text-center">
+		You can find all of my other work on my <a
+			class="font-bold hover:underline"
+			href="https://github.com/laggyson">GitHub</a
+		>
+	</footer>
 </div>
