@@ -5,6 +5,6 @@
 <head>
 	<title>Michael Richards</title>
 </head>
-<body class="h-screen font-Heebo dark:bg-[#18181a] dark:text-white overflow-x-hidden">
+<body class="h-screen font-Heebo dark:bg-slate-800 dark:text-white overflow-x-hidden">
 	<slot />
 </body>
