@@ -57,6 +57,29 @@
 			link: 'https://scoreboardish.laggi.sh'
 		},
 		{
+			name: 'Tranquility Gaming Website',
+			techs: [
+				{ color: '#0d6d8c', name: 'React', logo: React },
+				{ color: 'white', name: 'NextJS', logo: Nextjs },
+				{ color: '#3178c6', name: 'Typescript', logo: Typescript },
+				{ color: '#cd6799', name: 'SASS', logo: Sass }
+			],
+			desc: 'Public facing website created for a large videogame Tournament | Hosted and managed on an AWS EC2 server',
+			link: 'https://tranquility.gg'
+		},
+		{
+			name: 'Moist Meter',
+			techs: [
+				{ color: '#0d6d8c', name: 'React', logo: React },
+				{ color: 'white', name: 'NextJS', logo: Nextjs },
+				{ color: '#3178c6', name: 'Typescript', logo: Typescript },
+				{ color: '#cd6799', name: 'SASS', logo: Sass },
+				{ color: '#0c344b', name: 'Prisma', logo: Prisma }
+			],
+			desc: 'Website to view all "Moist Meter" ratings created by popular content creator "MoistCr1tikal" | Authentication handled by AuthJS | Database hosted on PlanetScale',
+			link: 'https://moist-meter.laggi.sh'
+		},
+		{
 			name: 'Staffer',
 			techs: [
 				{ color: '#ff4700', name: 'Svelte', logo: Svelte },
@@ -65,8 +88,19 @@
 				{ color: '#0c344b', name: 'Prisma', logo: Prisma },
 				{ color: '#3fcf8e', name: 'supabase', logo: Supabase }
 			],
-			desc: 'Web app that helps you manage and staff events that rely on a diverse, constantly changing pool of freelancers ',
+			desc: 'Web app that helps you manage and staff events that rely on a diverse, constantly changing pool of freelancers | Authentication handled by AuthJS',
 			link: 'https://staffer.laggi.sh'
+		},
+		{
+			name: 'Autown',
+			techs: [
+				{ color: '#ff4700', name: 'Svelte', logo: Svelte },
+				{ color: '#3178c6', name: 'Typescript', logo: Typescript },
+				{ color: '#38bdf8', name: 'Tailwind', logo: Tailwind },
+				{ color: '#2c394b', name: 'Firebase', logo: Firebase }
+			],
+			desc: 'A website to help users figure out whether driving or public transit is faster for one or more daily trips',
+			link: 'https://autown.laggi.sh'
 		}
 	];
 
@@ -105,10 +139,12 @@
 	</div>
 	<section />
 	<div class="mt-20">
-		<section class="flex gap-4 p-2 justify-center">
+		<section class="flex gap-4 p-2 justify-center flex-wrap items-stretch">
 			{#each projects as project}
 				<a href={project.link}>
-					<div class="border rounded-lg p-2 hover:bg-slate-500 transition-all max-w-lg">
+					<div
+						class="border rounded-lg p-2 hover:bg-slate-500 transition-all max-w-lg h-full flex flex-col justify-between"
+					>
 						<h3 class="text-center text-2xl font-bold">{project.name}</h3>
 						<p class="text-sm text-center my-2 p-2">{project.desc}</p>
 						<div class="flex flex-wrap gap-2 justify-center">
