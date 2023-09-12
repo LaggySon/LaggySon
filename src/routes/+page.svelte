@@ -104,6 +104,10 @@
 		}
 	];
 
+	function getDelayClass(i: number): string {
+		return `animate-bounce [animation-delay:${100 * i}ms]`;
+	}
+
 	let w: number;
 </script>
 
@@ -140,10 +144,10 @@
 	<section />
 	<div class="mt-20">
 		<section class="flex gap-4 p-2 justify-center flex-wrap items-stretch">
-			{#each projects as project}
-				<a href={project.link}>
+			{#each projects as project, i}
+				<a href={project.link} style={`animation-delay:${200 * i}ms;`} class="animate-slide-in">
 					<div
-						class="border rounded-lg p-2 hover:bg-slate-500 transition-all max-w-lg h-full flex flex-col justify-between"
+						class={`border rounded-lg p-2 hover:bg-slate-500 hover:animate-bounce transition-all max-w-lg h-full flex flex-col justify-between  hover:scale-105 hover:shadow-md hover:shadow-white`}
 					>
 						<h3 class="text-center text-2xl font-bold">{project.name}</h3>
 						<p class="text-sm text-center my-2 p-2">{project.desc}</p>
